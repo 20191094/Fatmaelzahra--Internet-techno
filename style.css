@@ -14,6 +14,37 @@
        background-position: center;
         
     }
+    ul{
+        list-style: none;
+        border:1px solid darkblue;
+        background-color: lightblue;
+        overflow: hidden;
+        padding: 0px;
+        margin: 0px;
+    }
+    li{
+        float: left;
+    }
+    a{
+        text-decoration: none;
+        color:rgb(50, 5, 133);
+    }
+    li a{
+        display:block;
+        color:white;
+        padding:14px;
+
+    }
+    li a:hover{
+        background-color: navy;
+    }
+    .nav-right{
+        float:right;
+    }
+    li a.active{
+        background-color: navy;
+        color:white;
+    }
     
     .button{
         background-color: lightskyblue;
@@ -28,12 +59,19 @@
         border-collapse: collapse;
         border-color: midnightblue;
     }
+    
     thead{
         background-color: lightyellow;
         color: maroon;
         text-align: center;
     }
-   
+    thead tr{
+        text-align: center;
+    }
+    tbody tr:nth-child(even){
+        background-color: thistle;
+
+    }
     td{
         text-align: left;
         border-color: midnightblue;
@@ -45,4 +83,8 @@
     fieldset{
         margin: 20px;
     }
-    
+    h1{
+        border:1px solid navy;
+        border-radius: 10%;
+        background-image:linear-gradient(darkblue,lightblue)
+    }
