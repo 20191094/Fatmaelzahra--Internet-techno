@@ -1,0 +1,14 @@
+fieldset{
+    margin: 5% 40%;
+    border: 1px solid black;
+    padding: 30px 13px 30px 13px;
+    text-align: center;
+}
+form p{
+    text-align: center;
+}
+
+.submit{
+    padding: 10px 15px;
+    font-size: 17px;
+}
