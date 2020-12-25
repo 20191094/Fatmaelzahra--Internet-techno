@@ -2,8 +2,14 @@
     <header>
         <title> Internet Technology</title>
         <link rel="stylesheet"type="text/css"href="style.css">
+        <script>
+            var arr=[['20191094',"Fatma","computer science","student.png"],
+            ["20192342","Yasmine","computer science","student.png"],
+            ["20191234","Maha","computer science","student.png"]];
+          
+        </script>
     </header>
-    <body>
+    <body onload="init();">
         <nav>
             <ul>
                 <li> <a href="index.html" target="_blank"> Home</a></li>
@@ -12,59 +18,116 @@
                  <li class="nav-right"><a href="sign.html">Logout</a></li>
               </ul>
        </nav>
+       <div class="searchbar">
+        <input type="search" class="searchbox" >
+       </div>
+       <div id="table"></div>
         <hr>
+      <!-- <table border="1">
+        <thead>
+            <tr>
+                <td> ID</td>
+                <td> Name</td>
+                <td> Faculty</td>
+                <td>Image</td>
+               
+            </tr>
+        </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">
+                        <ul>
+                            <li>20191094</li>
+                            <li>Fatma</li>
+                        </ul>
+                    </td>
+                    <td> computer science</td>
+                    <td> <img src="Image/student.png"alt="student " width="50"hight="50"></td>
+                </tr>
+                <tr>
+                 <td> 20191094</td>
+                 <td> Fatma</td>
+                 <td> computer science</td>
+                 <td> <img src="Image/student.png"alt="student " width="50"hight="50"></td>
+                </tr>
+                <tr>
+                 <td> 20192342</td>
+                 <td> Yasmine</td>
+                 <td> computer science</td>
+                 <td> <img src="Image/student.png"alt="student " width="50"hight="50"></td>
+                </tr>
+                <tr>
+                 <td> 20191234</td>
+                 <td> Maha</td>
+                 <td> computer science</td>
+                 <td> <img src="Image/student.png"alt="student " width="50"hight="50"></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4"> Number of students:1</td>
+                </tr>
+            </tfoot>
+    </table>-->
+    <script>
+    
+        function init()
+        {
+            var table=" ";
+            var count=0;
+            table +="<table border ='1'>"+
+                "<thead>"+
+                      "<tr>"+
+                        "  <td>ID</td>"+
+                         " <td>Name</td>"+
+                         " <td>Faculty</td>"+
+                         " <td>Image</td>"+
+                      "</tr>"+
+                 "</thead>"+
+           "<tbody>";
+           
+            for(var i=0; i<arr.length;i++)
+            {
+                var studentId = arr[i][0];
+               var studentName= arr[i][1];
+               var studentFaculty = arr[i][2];
+               var studentImagePath = arr[i][3];
+               table+=  "<tr>";
+               table+= "<td>"+studentId+"</td>";
+              table+= "<td>"+studentName+"</td>";
+              table+="<td>"+studentFaculty+"</td>";
+              table+="<td><img src='Image\\"+studentImagePath+"' width='50px' height='50px' alt='image of" +studentName+ "' ></td>";
+              table+="</tr>";
+            count++;
+            }
+            table+="</tbody>";
+            table+="<tfoot>"+
+                      "<tr>"+
+                          " <td colspan='4'>"+
+                          "Total No of Students: "+count+
+                            "</td>"+
+                     "  </tr>"+
+                  "</tfoot>"+
+            "</table>";
+            document.getElementById("table").innerHTML= table;
+        }
         
-       <table border="1">
-           <thead>
-               <tr>
-                   <td> Name</td>
-                   <td> ID</td>
-                   <td> Faculty</td>
-                   <td>Image</td>
-                  
-               </tr>
-           </thead>
-               <tbody>
-                   <tr>
-                       <td colspan="2">
-                           <ul>
-                               <li>Fatma</li>
-                               <li>20191094</li>
-                           </ul>
-                       </td>
-                       <td> computer science</td>
-                       <td> <img src="Image/student.png"alt="student " width="50"hight="50"></td>
-                   </tr>
-                   <tr>
-                    <td> Fatma</td>
-                    <td> 20191094</td>
-                    <td> computer science</td>
-                    <td> <img src="Image/student.png"alt="student " width="50"hight="50"></td>
-                   </tr>
-                   <tr>
-                    <td> Fatma</td>
-                    <td> 20191094</td>
-                    <td> computer science</td>
-                    <td> <img src="Image/student.png"alt="student " width="50"hight="50"></td>
-                   </tr>
-                   <tr>
-                    <td> Fatma</td>
-                    <td> 20191094</td>
-                    <td> computer science</td>
-                    <td> <img src="Image/student.png"alt="student " width="50"hight="50"></td>
-                   </tr>
-               </tbody>
-               <tfoot>
-                   <tr>
-                       <td colspan="4"> Number of students:1</td>
-                   </tr>
-               </tfoot>
-       </table>
-       <hr>
+       
+
+        
+    </script>
 
     </body>
+        
+      
+       
+
+    
     <footer>
         copyright &copy; <a href="https://www.fue.edu.eg/" target="_blank"> Future University in egypt</a> 
         &nbsp; &mdash; <a href="mailto: 123@hotmail.com"target="_blank"> Contact us</a>
     </footer>
+    
+       
+    </body>
 </html>
